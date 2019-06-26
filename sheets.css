@@ -1,6 +1,14 @@
 body{
   background: #444;
 }
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
 #yinyang{
   width:200px;
   height: 200px;
@@ -8,7 +16,11 @@ body{
   border-radius:50%;
   background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#ffffff 50%,#000000 51%);
   position: relative;
-  margin:100px auto;
+  margin:100px auto 20px;
+  animation-duration: 3s;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 #yinyang>.one{
   /* border:1px solid red; */
@@ -49,4 +61,8 @@ body{
   left:40px;
   top:40px;
   background: #000;
+  }
+  p{
+    color:white;
+    text-align: center;
   }
